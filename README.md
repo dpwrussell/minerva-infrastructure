@@ -1,9 +1,17 @@
 # Minerva Infrastructure
 
 This repository contains the templates necessary to deploy the minerva platform.
-It is comprised of some cloudformation and serverless configurations.
+It is comprised of cloudformation and serverless configurations, plus scripts.
 
-## Prerequisites
+## Architecture
+
+[Deployment Architecture Documentation](doc/architecture.md)
+
+## Deployment
+
+For high level details about the deployment see [this page](doc/deployment.md).
+
+### Prerequisites
 - A VPC in the desired region.
 - A pair of public subnets in the VPC.
 - A pair of private subnets with NAT gateways configured in the VPC.
@@ -12,7 +20,7 @@ It is comprised of some cloudformation and serverless configurations.
 - A configuration file with these and some other properties.
 - A deployment bucket for serverless.
 
-## Configuration File
+### Configuration File
 
 ```YAML
 Region: us-east-1
@@ -54,7 +62,7 @@ BatchClusterSpotBidPercentage: 50
 DatabasePassword: password
 ```
 
-## Instructions
+### Instructions
 
 1. Deploy the common cloudformation infrastructure
 
